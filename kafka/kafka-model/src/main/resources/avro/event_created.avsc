@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "name": "EventData",
+    "fields": [
+      {
+        "name": "message",
+        "type": "string"
+      }
+
+  ]
+}

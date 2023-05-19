@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customer-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customer-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-analysing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-analysing-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-analysis-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-analysis-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-announcement-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-management-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-management-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-ticketing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-ticketing-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-config-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-config-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-data-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-data-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/kafka-producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-pocessing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-processing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-processing-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketing-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-management-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-management-service/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

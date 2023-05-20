@@ -1,5 +1,7 @@
 package com.example.orderservice.models;
 
+import com.microservice.clients.event.dtos.valueObjects.Event;
+import com.microservice.clients.ticket.dtos.Ticket;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderItem {
-    private String eventId;
-    private String ticketId;
+    private Event eventId;
+    private Ticket ticketId;
     private BigDecimal price;
 }

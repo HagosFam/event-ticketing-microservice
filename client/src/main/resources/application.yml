@@ -1,0 +1,3 @@
+event:
+  server:
+    url: http://localhost:8083

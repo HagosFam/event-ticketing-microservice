@@ -1,33 +1,37 @@
 package com.microservice.eventanalysingservice.models;
 
+import com.microservice.clients.ticket.dtos.Ticket;
+import com.microservice.clients.ticket.dtos.TicketRequest;
+import com.microservice.clients.user.dtos.User;
+
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AttendeeAnalytics {
-    private String attendeeId;
-    private int ticketsPurchased;
+    private User attendee;
+    private List<Ticket> ticketsPurchased;
     private BigDecimal totalSpent;
 
     // Constructors, getters, and setters
 
-    public AttendeeAnalytics(String attendeeId) {
-        this.attendeeId = attendeeId;
-        this.ticketsPurchased = 0;
+    public AttendeeAnalytics(User attendee) {
+        this.attendee = attendee;
+        this.ticketsPurchased = new ArrayList<>();
         this.totalSpent = BigDecimal.ZERO;
     }
 
-    public String getAttendeeId() {
-        return attendeeId;
+    public User getAttendeeId() {return attendee;}
+
+    public void setAttendeeId(User attendee) {
+        this.attendee = attendee;
     }
 
-    public void setAttendeeId(String attendeeId) {
-        this.attendeeId = attendeeId;
-    }
-
-    public int getTicketsPurchased() {
+    public List<Ticket> getTicketsPurchased() {
         return ticketsPurchased;
     }
 
-    public void setTicketsPurchased(int ticketsPurchased) {
+    public void setTicketsPurchased(List<Ticket> ticketsPurchased) {
         this.ticketsPurchased = ticketsPurchased;
     }
 
@@ -41,11 +45,16 @@ public class AttendeeAnalytics {
 
     // Additional methods for updating attendee analytics data
 
-    public void incrementTicketsPurchased() {
-        this.ticketsPurchased++;
+    public List<Ticket> incrementTicketsPurchased(Ticket t) {
+        this.ticketsPurchased.add(t);
+        updateTotalSpentAmount(t.getPrice());
+        return ticketsPurchased;
     }
 
-    public void addSpentAmount(BigDecimal amount) {
-        this.totalSpent = this.totalSpent.add(amount);
+    public BigDecimal updateTotalSpentAmount(BigDecimal price){
+      this.totalSpent= this.totalSpent.add(price);
+      return totalSpent;
+
+
     }
 }

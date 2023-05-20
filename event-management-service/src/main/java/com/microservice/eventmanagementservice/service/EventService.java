@@ -22,6 +22,7 @@ public class EventService {
         eventRepository.save(event);
         log.info("event successfully created");
         return event;
+
     }
 
     public Event getEvent(String eventId){

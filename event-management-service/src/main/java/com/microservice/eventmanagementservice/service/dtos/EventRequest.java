@@ -26,7 +26,7 @@ public class EventRequest {
         private Address location;
         private EventType eventType;
         private AgeRestriction ageRestriction;
-    private List<TicketItems> ticketItemsList= new ArrayList<>();
+         private List<TicketItems> ticketItemsList= new ArrayList<>();
 
 
 

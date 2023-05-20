@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81e757bc-b2a6-43db-81f0-56a2d2f4b1f2" name="Changes" comment="" />
+    <list default="true" id="81e757bc-b2a6-43db-81f0-56a2d2f4b1f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event/EventClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event/EventClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/Demo1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/EventManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/service/dtos/EventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/service/dtos/EventRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/EventTicketingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/EventTicketingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/service/TicketService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +46,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -61,9 +75,11 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/yohannes/playground/event-ticketing-microservice/kafka/kafka-data-config/src/main/java/com/microservice/kafka/data",
+    "last_opened_file_path": "/Users/yohannes/playground/event-ticketing-microservice/client/src/main/java/com/microservice/clients/event/dtos/valueObjects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,11 +97,11 @@
       <recent name="com.example.orderservice.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event/dtos/valueObjects" />
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event" />
       <recent name="$PROJECT_DIR$/kafka/kafka-data-config/src/main/java/com/microservice/kafka/data" />
       <recent name="$PROJECT_DIR$/demo/src/test/java" />
       <recent name="$PROJECT_DIR$/event-management-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/demo1/src/main/java/com/microservice/eventmanagementservice" />
-      <recent name="$PROJECT_DIR$/event-ticketing-service/src/main/java/com/microservice/eventticketingservice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/kafka/kafka-model/src/main/resources/avro" />
@@ -94,10 +110,11 @@
       <recent name="com.example.usermanagementservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.microservice.clients.event.dtos.valueObjects" />
       <recent name="com.microservice.eventanalysingservice.messaging" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Demo1Application (1)">
+  <component name="RunManager" selected="Spring Boot.EventTicketingServiceApplication">
     <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-management-service" />
       <extension name="coverage">
@@ -171,13 +188,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo1Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="event-management-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.eventmanagementservice.Demo1Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Demo1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="event-management-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Demo1Application" />
@@ -202,6 +212,26 @@
     <configuration name="EventAnnouncementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="event-announcement-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.eventannouncementservice.EventAnnouncementServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="event-management-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.eventmanagementservice.EventManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventTicketingServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ticketing-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservices.eventticketingservice.EventTicketingServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.microservices.eventticketingservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -243,6 +273,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.EventTicketingServiceApplication (1)" />
         <item itemvalue="Spring Boot.App" />
         <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.UserManagementServiceApplicationTests" />
@@ -262,23 +293,12 @@
       <option name="presentableId" value="Default" />
       <updated>1684337143245</updated>
       <workItem from="1684337144433" duration="5125000" />
-      <workItem from="1684414451794" duration="36164000" />
+      <workItem from="1684414451794" duration="42922000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/kafka/kafka-consumer/src/main/java/com/microservice/kafka/consumer/config/KafkaConsumerConfig.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -15,6 +15,15 @@ public class TicketController {
     public TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
     }
+    @GetMapping("/{ticketId}")
+    public ResponseEntity<Ticket> getTicketById(@PathVariable String ticketId) {
+        Ticket ticket = ticketService.getTicketFromId(ticketId);
+        if (ticket != null) {
+            return ResponseEntity.ok(ticket);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     @PostMapping("/buy")
     public ResponseEntity<Ticket> createTicket(@RequestBody TicketRequest ticketRequest) {

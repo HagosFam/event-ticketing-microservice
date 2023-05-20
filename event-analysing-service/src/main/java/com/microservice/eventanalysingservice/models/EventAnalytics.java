@@ -7,9 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 @Data
@@ -21,24 +19,13 @@ public class EventAnalytics {
     @Id
     private String id;
     private Event event;
-    private long totalTicketsSold;
-    private long totalNumberOfTicket;
-    private int totalTicketsRefunded;
+    private List<String> processedTickets= new ArrayList<>();
+    private long totalNumberOfTickets;
     private BigDecimal totalRevenue;
 
-
-
-
-    // Additional methods for updating analytics data
-
-    public void incrementTicketsSold() {
-        this.totalTicketsSold++;
+    public void addProcessedTickets(String ticketId) {
+        this.processedTickets.add(ticketId);
     }
-
-    public void incrementTicketsRefunded() {
-        this.totalTicketsRefunded++;
-    }
-
     public void addRevenue(BigDecimal amount) {
         this.totalRevenue = this.totalRevenue.add(amount);
     }

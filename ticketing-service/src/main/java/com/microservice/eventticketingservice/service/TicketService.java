@@ -13,8 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-import static com.microservice.eventticketingservice.models.enums.TicketStatus.ACTIVE;
-import static com.microservice.eventticketingservice.models.enums.TicketStatus.USED;
+import static com.microservice.eventticketingservice.models.enums.TicketStatus.*;
 
 @Service
 @RequiredArgsConstructor
@@ -22,6 +21,18 @@ import static com.microservice.eventticketingservice.models.enums.TicketStatus.U
 public class TicketService {
     private final TicketRepository ticketRepository;
     private final EventClient eventClient;
+    public Ticket getTicketFromId(String ticketId){
+        Optional<Ticket> ticketbyId = ticketRepository.findById(ticketId);
+        if(ticketbyId.isPresent()){
+            Ticket ticket = ticketbyId.get();
+            return ticket;
+
+        }
+        else {
+            log.error("ticket with an id: {} was not found", ticketId);
+            return null;
+        }
+    }
 
     public Ticket createATicket(TicketRequest ticketRequest){
         Ticket ticket= TicketDTOAdapter.getTicket(ticketRequest);
@@ -45,7 +56,14 @@ public class TicketService {
     }
 
     public void ticketRefund(String ticketId){
-
+        Optional<Ticket> byId = ticketRepository.findById(ticketId);
+        if(byId.isPresent()){
+            Ticket ticket = byId.get();
+            ticket.setStatus(CANCELLED);
+            ticketRepository.save(ticket);
+            // make a request to payment method inorder to handle actual money refund
+            log.info("ticket with id :{} was successfully refunded", ticketId);
+        }
     }
     public void deleteTicket(String ticketId){
         Optional<Ticket> byId = ticketRepository.findById(ticketId);

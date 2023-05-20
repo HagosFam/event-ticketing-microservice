@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
 
-public interface EventAnalysisRepository extends MongoRepository<EventAnalyticsService,String> {
+public interface EventAnalysisRepository extends MongoRepository<EventAnalytics,String> {
 
     Optional<EventAnalytics> findByEvent(Event event);
 

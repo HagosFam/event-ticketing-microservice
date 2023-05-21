@@ -3,7 +3,7 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/events
   application:
-    name: event
+    name: events
 server:
   port: 8083
 
@@ -18,8 +18,8 @@ kafka-producer-config:
   linger-ms: 5
   request-timeout-ms: 60000
   retry-count: 5
-kafka-config:
 
+kafka-config:
   bootstrap-servers: localhost:19092, localhost:29092, localhost 39092
   schema-registry-url: schema.registry.url
   schema-registry-url-key: http://localhost:8081

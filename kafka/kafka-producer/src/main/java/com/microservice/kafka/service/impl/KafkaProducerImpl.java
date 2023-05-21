@@ -1,10 +1,13 @@
 package com.microservice.kafka.service.impl;
 
+import com.microservice.kafka.data.KafkaConfigData;
 import com.microservice.kafka.exception.KafkaProducerException;
 import com.microservice.kafka.service.KafkaProducer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.avro.specific.SpecificRecordBase;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.kafka.KafkaException;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
@@ -21,6 +24,7 @@ import java.io.Serializable;
 public class KafkaProducerImpl <K extends Serializable, V extends SpecificRecordBase> implements KafkaProducer<K,V> {
 
     private final KafkaTemplate<K,V> kafkaTemplate;
+
     @Override
     public void send(String topicName, K key, V message, ListenableFutureCallback<SendResult<K, V>> callback) {
             log.info("Sending message={} to topic={}", message, topicName);

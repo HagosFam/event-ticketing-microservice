@@ -5,16 +5,862 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81e757bc-b2a6-43db-81f0-56a2d2f4b1f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/microservice/configserver/ConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/test/java/com/microservice/configserver/ConfigServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/common.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/init_kafka.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/kafka_cluster.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-0/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-0/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-0/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-0/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-0/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-1/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-1/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-1/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-1/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-1/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-10/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-10/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-10/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-10/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-10/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-11/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-11/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-11/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-11/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-11/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-12/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-12/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-12/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-12/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-12/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-13/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-13/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-13/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-13/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-13/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-14/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-14/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-14/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-14/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-14/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-15/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-15/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-15/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-15/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-15/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-16/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-16/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-16/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-16/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-16/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-17/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-17/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-17/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-17/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-17/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-18/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-18/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-18/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-18/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-18/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-19/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-19/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-19/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-19/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-19/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-2/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-2/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-2/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-2/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-2/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-20/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-20/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-20/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-20/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-20/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-21/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-21/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-21/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-21/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-21/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-22/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-22/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-22/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-22/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-22/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-23/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-23/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-23/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-23/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-23/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-24/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-24/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-24/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-24/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-24/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-25/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-25/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-25/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-25/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-25/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-26/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-26/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-26/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-26/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-26/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-27/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-27/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-27/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-27/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-27/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-28/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-28/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-28/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-28/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-28/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-29/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-29/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-29/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-29/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-29/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-3/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-3/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-3/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-3/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-3/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-30/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-30/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-30/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-30/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-30/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-31/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-31/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-31/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-31/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-31/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-32/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-32/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-32/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-32/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-32/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-33/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-33/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-33/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-33/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-33/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-34/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-34/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-34/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-34/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-34/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-35/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-35/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-35/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-35/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-35/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-36/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-36/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-36/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-36/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-36/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-37/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-37/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-37/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-37/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-37/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-38/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-38/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-38/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-38/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-38/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-39/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-39/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-39/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-39/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-39/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-4/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-4/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-4/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-4/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-4/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-40/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-40/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-40/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-40/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-40/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-41/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-41/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-41/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-41/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-41/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-42/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-42/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-42/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-42/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-42/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-43/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-43/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-43/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-43/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-43/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-44/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-44/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-44/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-44/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-44/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-45/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-45/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-45/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-45/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-45/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-46/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-46/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-46/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-46/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-46/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-47/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-47/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-47/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-47/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-47/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-48/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-48/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-48/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-48/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-48/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-49/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-49/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-49/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-49/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-49/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-5/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-5/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-5/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-5/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-5/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-6/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-6/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-6/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-6/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-6/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-7/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-7/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-7/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-7/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-7/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-8/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-8/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-8/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-8/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-8/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-9/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-9/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-9/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-9/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/__consumer_offsets-9/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/cleaner-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-0/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-0/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-0/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-0/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-0/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-1/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-1/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-1/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-1/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-1/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-2/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-2/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-2/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-2/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/event-created-2/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/log-start-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/meta.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/recovery-point-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-1/replication-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-0/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-0/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-0/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-0/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-0/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-1/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-1/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-1/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-1/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-1/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-10/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-10/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-10/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-10/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-10/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-11/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-11/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-11/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-11/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-11/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-12/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-12/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-12/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-12/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-12/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-13/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-13/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-13/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-13/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-13/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-14/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-14/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-14/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-14/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-14/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-15/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-15/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-15/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-15/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-15/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-16/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-16/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-16/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-16/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-16/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-17/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-17/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-17/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-17/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-17/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-18/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-18/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-18/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-18/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-18/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-19/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-19/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-19/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-19/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-19/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-2/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-2/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-2/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-2/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-2/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-20/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-20/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-20/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-20/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-20/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-21/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-21/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-21/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-21/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-21/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-22/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-22/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-22/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-22/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-22/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-23/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-23/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-23/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-23/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-23/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-24/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-24/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-24/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-24/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-24/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-25/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-25/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-25/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-25/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-25/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-26/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-26/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-26/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-26/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-26/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-27/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-27/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-27/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-27/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-27/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-28/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-28/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-28/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-28/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-28/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-29/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-29/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-29/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-29/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-29/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-3/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-3/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-3/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-3/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-3/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-30/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-30/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-30/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-30/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-30/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-31/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-31/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-31/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-31/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-31/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-32/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-32/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-32/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-32/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-32/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-33/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-33/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-33/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-33/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-33/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-34/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-34/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-34/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-34/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-34/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-35/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-35/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-35/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-35/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-35/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-36/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-36/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-36/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-36/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-36/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-37/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-37/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-37/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-37/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-37/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-38/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-38/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-38/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-38/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-38/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-39/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-39/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-39/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-39/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-39/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-4/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-4/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-4/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-4/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-4/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-40/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-40/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-40/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-40/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-40/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-41/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-41/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-41/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-41/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-41/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-42/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-42/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-42/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-42/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-42/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-43/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-43/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-43/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-43/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-43/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-44/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-44/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-44/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-44/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-44/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-45/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-45/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-45/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-45/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-45/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-46/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-46/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-46/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-46/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-46/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-47/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-47/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-47/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-47/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-47/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-48/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-48/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-48/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-48/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-48/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-49/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-49/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-49/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-49/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-49/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-5/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-5/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-5/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-5/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-5/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-6/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-6/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-6/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-6/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-6/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-7/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-7/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-7/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-7/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-7/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-8/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-8/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-8/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-8/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-8/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-9/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-9/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-9/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-9/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/__consumer_offsets-9/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/cleaner-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-0/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-0/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-0/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-0/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-0/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-1/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-1/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-1/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-1/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-1/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-2/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-2/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-2/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-2/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/event-created-2/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/log-start-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/meta.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/recovery-point-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-2/replication-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-0/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-0/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-0/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-0/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-0/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-1/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-1/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-1/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-1/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-1/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-10/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-10/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-10/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-10/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-10/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-11/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-11/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-11/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-11/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-11/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-12/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-12/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-12/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-12/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-12/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-13/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-13/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-13/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-13/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-13/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-14/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-14/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-14/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-14/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-14/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-15/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-15/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-15/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-15/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-15/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-16/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-16/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-16/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-16/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-16/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-17/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-17/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-17/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-17/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-17/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-18/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-18/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-18/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-18/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-18/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-19/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-19/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-19/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-19/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-19/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-2/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-2/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-2/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-2/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-2/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-20/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-20/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-20/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-20/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-20/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-21/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-21/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-21/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-21/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-21/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-22/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-22/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-22/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-22/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-22/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-23/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-23/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-23/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-23/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-23/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-24/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-24/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-24/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-24/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-24/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-25/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-25/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-25/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-25/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-25/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-26/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-26/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-26/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-26/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-26/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-27/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-27/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-27/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-27/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-27/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-28/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-28/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-28/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-28/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-28/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-29/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-29/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-29/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-29/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-29/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-3/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-3/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-3/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-3/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-3/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-30/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-30/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-30/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-30/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-30/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-31/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-31/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-31/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-31/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-31/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-32/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-32/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-32/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-32/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-32/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-33/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-33/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-33/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-33/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-33/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-34/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-34/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-34/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-34/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-34/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-35/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-35/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-35/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-35/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-35/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-36/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-36/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-36/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-36/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-36/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-37/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-37/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-37/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-37/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-37/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-38/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-38/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-38/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-38/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-38/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-39/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-39/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-39/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-39/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-39/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-4/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-4/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-4/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-4/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-4/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-40/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-40/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-40/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-40/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-40/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-41/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-41/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-41/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-41/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-41/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-42/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-42/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-42/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-42/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-42/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-43/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-43/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-43/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-43/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-43/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-44/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-44/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-44/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-44/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-44/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-45/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-45/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-45/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-45/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-45/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-46/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-46/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-46/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-46/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-46/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-47/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-47/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-47/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-47/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-47/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-48/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-48/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-48/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-48/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-48/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-49/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-49/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-49/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-49/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-49/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-5/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-5/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-5/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-5/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-5/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-6/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-6/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-6/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-6/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-6/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-7/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-7/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-7/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-7/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-7/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-8/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-8/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-8/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-8/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-8/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-9/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-9/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-9/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-9/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/__consumer_offsets-9/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/cleaner-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-0/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-0/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-0/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-0/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-0/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-1/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-1/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-1/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-1/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-1/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-2/00000000000000000000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-2/00000000000000000000.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-2/00000000000000000000.timeindex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-2/leader-epoch-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/event-created-2/partition.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/log-start-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/meta.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/recovery-point-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/kafka/broker-3/replication-offset-checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/zookeeper/data/myid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/zookeeper/data/version-2/snapshot.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/volumes/zookeeper/transactions/version-2/log.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/docker-compose/zookeeper.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event/EventClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event/EventClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/Demo1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/EventManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/service/dtos/EventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/service/dtos/EventRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-analysing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-analysing-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-analysing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-analysing-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-announcement-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-announcement-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-announcement-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-announcement-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-management-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/EventManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/EventManagementApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/messaging/publisher/EventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/java/com/microservice/eventmanagementservice/messaging/publisher/EventPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-management-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-management-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/microservice/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/microservice/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/microservice/kafka/service/impl/KafkaProducerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka/kafka-producer/src/main/java/com/microservice/kafka/service/impl/KafkaProducerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-pocessing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-pocessing-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/EventTicketingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/EventTicketingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketing-service/src/main/java/com/microservice/eventticketingservice/service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketing-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketing-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagementservice/UserManagementServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/java/com/example/usermanagementservice/UserManagementServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-management-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +895,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="minikube" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -79,7 +928,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/yohannes/playground/event-ticketing-microservice/client/src/main/java/com/microservice/clients/event/dtos/valueObjects",
+    "last_opened_file_path": "/Users/yohannes/playground/event-ticketing-microservice/client/src/main/java/com/microservice/clients/user/dtos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,6 +939,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.orderservice.service.dto" />
@@ -97,13 +949,14 @@
       <recent name="com.example.orderservice.models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/user/dtos" />
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/user" />
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/ticket/dtos" />
+      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/ticket" />
       <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event/dtos/valueObjects" />
-      <recent name="$PROJECT_DIR$/client/src/main/java/com/microservice/clients/event" />
-      <recent name="$PROJECT_DIR$/kafka/kafka-data-config/src/main/java/com/microservice/kafka/data" />
-      <recent name="$PROJECT_DIR$/demo/src/test/java" />
-      <recent name="$PROJECT_DIR$/event-management-service/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kafka" />
       <recent name="$PROJECT_DIR$/kafka/kafka-model/src/main/resources/avro" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -114,22 +967,7 @@
       <recent name="com.microservice.eventanalysingservice.messaging" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.EventTicketingServiceApplication">
-    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-management-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.etm.user.controller_test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.etm.user.controller_test" />
-      <option name="MAIN_CLASS_NAME" value="com.etm.user.controller_test.ControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-management-service" />
       <extension name="coverage">
@@ -145,32 +983,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserManagementServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-management-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.usermanagementservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.usermanagementservice" />
-      <option name="MAIN_CLASS_NAME" value="com.example.usermanagementservice.UserManagementServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-management-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.usermanagementservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.usermanagementservice" />
-      <option name="MAIN_CLASS_NAME" value="com.example.usermanagementservice.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.apigateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,6 +1003,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="event-management-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.Demo1Application" />
@@ -198,6 +1020,13 @@
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="customer-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.eurekaserver.EurekaServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,6 +1079,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.notificationservice.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.orderservice.OrderServiceApplication" />
@@ -271,13 +1107,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose/init_kafka.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="kafka/docker-compose/init_kafka.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose/zookeeper.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="kafka/docker-compose/zookeeper.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose/zookeeper.yml.zookeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="zookeeper" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="kafka/docker-compose/zookeeper.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose/init_kafka.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose/zookeeper.yml.zookeeper: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose/zookeeper.yml: Compose Deployment" />
         <item itemvalue="Spring Boot.EventTicketingServiceApplication (1)" />
         <item itemvalue="Spring Boot.App" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserManagementServiceApplicationTests" />
-        <item itemvalue="JUnit.ControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +1162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684337143245</updated>
       <workItem from="1684337144433" duration="5125000" />
-      <workItem from="1684414451794" duration="42922000" />
+      <workItem from="1684414451794" duration="86941000" />
     </task>
     <servers />
   </component>

@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-analysing-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-analysing-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-analysis-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-analysis-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-announcement-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-announcement-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-management-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-management-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/event-ticketing-service/src/main/java" charset="UTF-8" />
@@ -33,6 +40,7 @@
     <file url="file://$PROJECT_DIR$/order-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-pocessing-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-pocessing-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-processing-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-processing-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

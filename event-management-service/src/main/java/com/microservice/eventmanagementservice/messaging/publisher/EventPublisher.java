@@ -28,7 +28,7 @@ public class EventPublisher {
             kafkaProducer.send("event-created", key, eventData, kafkaCallback("event-is-created", eventData));
             log.info("eventData sent to kafka for event id:{}", event.getId());
         }catch (Exception e){
-          log.error("Error while sending eventData to kafka with event id:{}", event.getId());
+          log.error("Error while sending eventData to kafka with event id:{} message: {}", event.getId(),e.getMessage());
       }
     }
 

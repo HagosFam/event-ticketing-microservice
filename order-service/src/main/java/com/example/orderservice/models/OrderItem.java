@@ -15,6 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderItem {
     private Event eventId;
-    private Ticket ticketId;
+    private Ticket ticket;
     private BigDecimal price;
 }

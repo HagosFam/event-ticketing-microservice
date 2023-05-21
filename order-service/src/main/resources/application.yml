@@ -1,8 +1,8 @@
 spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/orders
   application:
     name: orders
-server:
-  port: 8082
+  profiles:
+    active: dev
+  config:
+    import: configserver:http://localhost:8071
+

@@ -1,11 +1,11 @@
-spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/tickets
-  application:
-    name: tickets
-server:
-  port: 8081
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/tickets
+#  application:
+#    name: tickets
+#server:
+#  port: 8081
 eureka:
   client:
     service-url:
@@ -13,3 +13,10 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     enabled: true
+spring:
+  application:
+    name: tickets
+  profiles:
+    active: dev
+  config:
+    import: configserver:http://localhost:8071

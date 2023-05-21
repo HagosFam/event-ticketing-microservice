@@ -1,6 +1,7 @@
 package com.microservice.eventticketingservice.models;
 
 import com.microservice.clients.event.dtos.valueObjects.Event;
+import com.microservice.clients.user.dtos.User;
 import com.microservice.eventticketingservice.models.enums.TicketStatus;
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -18,7 +19,7 @@ import java.time.LocalDate;
 public class Ticket {
     @Id
     private String id;
-    private long userId;
+    private User user;
     private String ticketNumber;
     private Event event;
     private String ticketItem;

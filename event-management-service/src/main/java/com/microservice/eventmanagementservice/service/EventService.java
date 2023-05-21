@@ -1,5 +1,6 @@
 package com.microservice.eventmanagementservice.service;
 
+import com.microservice.clients.eventAnalytics.EventAnalysisClient;
 import com.microservice.eventmanagementservice.models.Event;
 import com.microservice.eventmanagementservice.repository.EventRepository;
 import com.microservice.eventmanagementservice.service.dtos.EventDTOAdapter;
@@ -16,10 +17,12 @@ import java.util.Optional;
 @Slf4j
 public class EventService {
     private final EventRepository eventRepository;
+    private final EventAnalysisClient eventAnalysisClient;
 
     public Event createEvent(EventRequest eventRequest){
         Event event= EventDTOAdapter.getEvent(eventRequest);
         eventRepository.save(event);
+        eventAnalysisClient.createEventAnalyticsForEvent(event.getId());
         log.info("event successfully created");
         return event;
 

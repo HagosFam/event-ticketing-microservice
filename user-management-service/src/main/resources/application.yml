@@ -30,7 +30,7 @@
 #    enabled: true
 spring:
   application:
-    name: userService
+    name: users
   profiles:
     active: dev
   config:

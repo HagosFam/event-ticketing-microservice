@@ -16,5 +16,19 @@ public class EventDTOAdapter {
         event.setTicketItemsList(eventRequest.getTicketItemsList());
         return event;
     }
+    public static EventRequest mapEventToEventRequest(Event event) {
+        EventRequest eventRequest = new EventRequest();
+        eventRequest.setHostId(event.getHostId());
+        eventRequest.setName(event.getName());
+        eventRequest.setDescription(event.getDescription());
+        eventRequest.setStartdate(event.getStartdate());
+        eventRequest.setEndDate(event.getEndDate());
+        eventRequest.setLocation(event.getLocation());
+        eventRequest.setEventType(event.getEventType());
+        eventRequest.setAgeRestriction(event.getAgeRestriction());
+        eventRequest.setTicketItemsList(event.getTicketItemsList());
+        return eventRequest;
+    }
+
 
 }

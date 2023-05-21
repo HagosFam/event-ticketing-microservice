@@ -17,17 +17,9 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
 
-
-
-    @PostMapping
-    public ResponseEntity<Order> createOrder(@RequestBody OrderRequest orderRequest) {
-        Order order = orderService.createAnOrder(orderRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(order);
-    }
-
-    @PostMapping("/{orderId}/place")
-    public ResponseEntity<Order> placeOrder(@PathVariable String orderId) {
-        Order order = orderService.placeAnOrder(orderId);
+    @PostMapping("/place")
+    public ResponseEntity<Order> placeOrder(@RequestBody OrderRequest orderRequest) {
+        Order order = orderService.placeAnOrder(orderRequest);
         if (order != null) {
             return ResponseEntity.ok(order);
         } else {

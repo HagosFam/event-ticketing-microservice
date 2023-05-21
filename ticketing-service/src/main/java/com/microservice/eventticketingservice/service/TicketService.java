@@ -1,7 +1,9 @@
 package com.microservice.eventticketingservice.service;
 
 import com.microservice.clients.event.EventClient;
+import com.microservice.clients.event.dtos.EventDTOAdapter;
 import com.microservice.clients.event.dtos.valueObjects.Event;
+import com.microservice.clients.event.dtos.valueObjects.TicketItems;
 import com.microservice.eventticketingservice.models.Ticket;
 import com.microservice.eventticketingservice.repository.TicketRepository;
 import com.microservice.eventticketingservice.service.dtos.TicketRequest;
@@ -26,7 +28,6 @@ public class TicketService {
         if(ticketbyId.isPresent()){
             Ticket ticket = ticketbyId.get();
             return ticket;
-
         }
         else {
             log.error("ticket with an id: {} was not found", ticketId);
@@ -35,23 +36,41 @@ public class TicketService {
     }
 
     public Ticket createATicket(TicketRequest ticketRequest){
-        Ticket ticket= TicketDTOAdapter.getTicket(ticketRequest);
-        ticket.setStatus(ACTIVE);
-        ResponseEntity<Event> event = eventClient.getEvent(ticketRequest.getEventId());
-        ticket.setEvent(event.getBody());
+        try {
+            Event event = eventClient.getEvent(ticketRequest.getEventId()).getBody();
+            for (TicketItems ticketItems : event.getTicketItemsList()) {
+                if (ticketItems.getLabel().equals(ticketRequest.getTicketItem())) {
+                    if (ticketItems.getAvailableQuantity() <= 0) {
+                        log.error("ticketsItem not available");
+                        throw new Exception("no more avalible tickets");
+                    } else {
+                        ticketItems.setAvailableQuantity(ticketItems.getAvailableQuantity() - 1);
+                        eventClient.updateEvent(EventDTOAdapter.mapEventToEventRequest(event),event.getId());
 
-        //todo
-        // notification event
-        // check if there are any available tickets
-        // get ticket entry details for price
-        // decrement available quantity by 1
-        // call payment service
+                        ticketRequest.setPrice(ticketItems.getPrice());
+                    }
+                }
+            }
+            Ticket ticket = TicketDTOAdapter.getTicket(ticketRequest);
+            ticket.setStatus(ACTIVE);
+            ticket.setEvent(event);
 
-        ticketRepository.save(ticket);
-        //create a function to generate ticket file
-        log.info("ticket created successfully");
 
-        return ticket;
+            //todo
+            // notification event
+            // call payment service
+
+            ticketRepository.save(ticket);
+            //create a function to generate ticket file
+            log.info("ticket created successfully");
+
+            return ticket;
+        }
+        catch (Exception e){
+            log.error(e.getMessage());
+            return null;
+
+        }
 
     }
 
@@ -59,6 +78,12 @@ public class TicketService {
         Optional<Ticket> byId = ticketRepository.findById(ticketId);
         if(byId.isPresent()){
             Ticket ticket = byId.get();
+           for(TicketItems ticketItems: ticket.getEvent().getTicketItemsList()){
+               if (ticket.getTicketItem().equals(ticketItems.getLabel())){
+                   ticketItems.setAvailableQuantity(ticketItems.getAvailableQuantity()+1);
+                   eventClient.updateEvent(EventDTOAdapter.mapEventToEventRequest(ticket.getEvent()),ticket.getEvent().getId());
+               }
+           }
             ticket.setStatus(CANCELLED);
             ticketRepository.save(ticket);
             // make a request to payment method inorder to handle actual money refund

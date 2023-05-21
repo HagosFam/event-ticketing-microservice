@@ -9,7 +9,7 @@ public class TicketDTOAdapter {
         ticket.setTicketNumber(ticketRequest.getTicketNumber());
         ticket.setTicketItem(ticketRequest.getTicketItem());
         ticket.setDate(ticketRequest.getDate());
-        ticket.setUserId(ticketRequest.getUserId());
+        ticket.setUser(ticketRequest.getUser());
         return ticket;
     }
 }

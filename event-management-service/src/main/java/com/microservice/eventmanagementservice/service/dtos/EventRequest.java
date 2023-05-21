@@ -14,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-    @Setter
-    @NoArgsConstructor
-    @AllArgsConstructor
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class EventRequest {
         private long hostId;
         private String name;
@@ -26,7 +26,7 @@ public class EventRequest {
         private Address location;
         private EventType eventType;
         private AgeRestriction ageRestriction;
-         private List<TicketItems> ticketItemsList= new ArrayList<>();
+        private List<TicketItems> ticketItemsList= new ArrayList<>();
 
 
 

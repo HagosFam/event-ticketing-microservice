@@ -49,7 +49,8 @@ public class OrderService {
             makeRefund(orderId);
             order.setStatus(Status.CANCELLED);
             for(OrderItem orderItem: order.getOrderItems()){
-                eventAnalysisClient.addTicketSales(orderItem.getTicket().getId());
+                ticketClient.refundTicket(orderItem.getTicket().getId());
+                eventAnalysisClient.refundedTickets(orderItem.getTicket().getId());
             }
             return order;
         }

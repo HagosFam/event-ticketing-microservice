@@ -4,6 +4,7 @@ import com.microservice.clients.event.EventClient;
 import com.microservice.clients.event.dtos.EventDTOAdapter;
 import com.microservice.clients.event.dtos.valueObjects.Event;
 import com.microservice.clients.event.dtos.valueObjects.TicketItems;
+import com.microservice.clients.eventAnalytics.EventAnalysisClient;
 import com.microservice.eventticketingservice.models.Ticket;
 import com.microservice.eventticketingservice.repository.TicketRepository;
 import com.microservice.eventticketingservice.service.dtos.TicketRequest;
@@ -23,6 +24,7 @@ import static com.microservice.eventticketingservice.models.enums.TicketStatus.*
 public class TicketService {
     private final TicketRepository ticketRepository;
     private final EventClient eventClient;
+    private final EventAnalysisClient eventAnalysisClient;
     public Ticket getTicketFromId(String ticketId){
         Optional<Ticket> ticketbyId = ticketRepository.findById(ticketId);
         if(ticketbyId.isPresent()){
@@ -47,6 +49,7 @@ public class TicketService {
                         ticketItems.setAvailableQuantity(ticketItems.getAvailableQuantity() - 1);
                         eventClient.updateEvent(EventDTOAdapter.mapEventToEventRequest(event),event.getId());
 
+
                         ticketRequest.setPrice(ticketItems.getPrice());
                     }
                 }
@@ -61,6 +64,7 @@ public class TicketService {
             // call payment service
 
             ticketRepository.save(ticket);
+
             //create a function to generate ticket file
             log.info("ticket created successfully");
 

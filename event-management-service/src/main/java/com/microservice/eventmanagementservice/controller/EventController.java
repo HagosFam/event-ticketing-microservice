@@ -49,4 +49,8 @@ public class EventController {
             return ResponseEntity.notFound().build();
         }
     }
+    @GetMapping
+    public ResponseEntity<List<Event>> getAllEvents(){
+       return ResponseEntity.ok(eventService.getAllEvents());
+    }
 }

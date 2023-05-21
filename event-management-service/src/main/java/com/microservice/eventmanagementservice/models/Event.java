@@ -1,6 +1,7 @@
 package com.microservice.eventmanagementservice.models;
 
 
+import com.microservice.clients.user.dtos.User;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,7 +19,7 @@ import java.util.List;
 public class Event {
     @Id
     private String id;
-    private long hostId;
+    private User host;
     private String name;
     private String description;
     private LocalDate startdate;

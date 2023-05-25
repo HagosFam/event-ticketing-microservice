@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eurekaServer
+  config:
+    import: configserver:http://configServer:8071
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+

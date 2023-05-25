@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: tickets
+  config:
+    import: configserver:http://configServer:8071
+

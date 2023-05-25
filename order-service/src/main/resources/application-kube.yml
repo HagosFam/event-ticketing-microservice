@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: orders
+  config:
+    import: configserver:http://configServer:8071
+  kafka:
+    bootstrap-servers: kafka:9092

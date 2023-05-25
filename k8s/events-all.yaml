@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: events-service
+spec:
+  type: ClusterIP
+  selector:
+    app: events
+  ports:
+  - port: 8083
+    targetPort: 8083
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: events-deployment
+spec:
+  selector:
+    matchLabels:
+      app: events
+  template:
+    metadata:
+      labels:
+        app: events
+    spec:
+      containers:
+      - name: events
+        image: koedakyokotsu/event-management-service:latest
+#        resources:
+#          requests:
+#            memory: "32Mi"
+#            cpu: "100m"
+#          limits:
+#            memory: "128Mi"
+#            cpu: "500m"
+        ports:
+        - containerPort: 8083
+        env:
+          - name: MONGODB_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-events
+                key: mongodb-root-password
+          - name: MONGODB_URI
+            value: "mongodb://mongodb-service:27017/events?authSource=admin"
+#            value: "mongodb://root:$(MONGODB_ROOT_PASSWORD)@mongodb-events.default.svc.cluster.local:27017/events?authSource=admin"
+#            value: "mongodb+srv://root:duZ2G7KTgQHYg5nx@cluster0.msqgcsh.mongodb.net/events?retryWrites=true&w=majority"
+          - name: SPRING_PROFILES_ACTIVE
+            value: kube
+          - name: KAFKA_BROKER
+            value: kafka-service.default.svc.cluster.local:9092

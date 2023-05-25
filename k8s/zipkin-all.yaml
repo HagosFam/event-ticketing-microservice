@@ -27,7 +27,7 @@ metadata:
 spec:
   selector:
     app: zipkin
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - protocol: TCP
       port: 9411

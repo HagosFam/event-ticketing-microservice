@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: apiGateway
-  profiles:
-    active: dev
-  config:
-    import: configserver:http://localhost:8071

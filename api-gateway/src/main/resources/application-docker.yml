@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: eventAnnouncements
-  profiles:
-    active: docker
-  config:
-    import: configserver:http://configServer:8071

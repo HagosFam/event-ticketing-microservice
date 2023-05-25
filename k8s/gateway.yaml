@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gatewayserver-deployment
+  labels:
+    app: gatewayserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gatewayserver
+  template:
+    metadata:
+      labels:
+        app: gatewayserver
+    spec:
+      containers:
+        - name: gatewayserver
+          image: koedakyokotsu/gatewayserver:latest
+          ports:
+            - containerPort: 8072
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: kube
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gatewayserver
+spec:
+  selector:
+    app: gatewayserver
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8072
+      targetPort: 8072

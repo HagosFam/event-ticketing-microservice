@@ -7,6 +7,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface OrderRepository extends MongoRepository<Order,String > {
-    List<Order> findByUserId(String userId);
-    List<Order> findByOrderItemsEventId(String eventId);
+    List<Order> findByUserId(long userId);
+    List<Order> findByTicketsEventId(String eventId);
 }

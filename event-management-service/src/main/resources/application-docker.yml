@@ -1,7 +1,15 @@
 spring:
   application:
-    name: orders
-  profiles:
-    active: docker
+    name: events
+
   config:
     import: configserver:http://configServer:8071
+#  kafka:
+#    bootstrap-servers: kafka:9092
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eurekaServer:8761/eureka
+#    fetch-registry: true
+#    register-with-eureka: true
+#    enabled: true

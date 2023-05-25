@@ -1,6 +1,6 @@
 spring:
   application:
-    name: tickets
+    name: payments
   profiles:
     active: docker
   config:

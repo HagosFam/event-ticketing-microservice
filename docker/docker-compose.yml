@@ -231,6 +231,19 @@ services:
       - logstash
       - elasticsearch
       - kibana
+  api-gateway:
+    image: koedakyokotsu/apigw:latest
+    container_name: apigatway
+    ports:
+      - "8072:8072"
+    networks:
+      - spring
+    depends_on:
+      - eurekaServer
+      - configServer
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
 
 networks:
   elastic:

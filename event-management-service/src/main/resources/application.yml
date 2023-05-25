@@ -1,7 +1,14 @@
-spring:
-  application:
-    name: events
-  profiles:
-    active: dev
-  config:
-    import: configserver:http://localhost:8071
+#spring:
+#  application:
+#    name: events
+#  profiles:
+#    active: dev
+#  config:
+#    import: configserver:http://localhost:8071
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eurekaServer:8761/eureka
+#    fetch-registry: true
+#    register-with-eureka: true
+#    enabled: false

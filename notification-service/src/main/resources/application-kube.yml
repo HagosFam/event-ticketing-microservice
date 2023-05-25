@@ -3,4 +3,4 @@ spring:
     name: notifications
 
   config:
-    import: configserver:http://configServer:8071
+    import: configserver:http://config-server:8071

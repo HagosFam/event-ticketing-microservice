@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "users")
+@FeignClient(name = "users", url = "${clients.users.url}", fallback = UserClientFallback.class)
 public interface UserClient {
 
     @GetMapping("/api/users")

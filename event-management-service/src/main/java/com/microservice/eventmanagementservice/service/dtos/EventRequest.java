@@ -1,9 +1,9 @@
 package com.microservice.eventmanagementservice.service.dtos;
 
-import com.microservice.eventmanagementservice.models.Address;
-import com.microservice.eventmanagementservice.models.AgeRestriction;
-import com.microservice.eventmanagementservice.models.EventType;
-import com.microservice.eventmanagementservice.models.TicketItems;
+import com.microservice.clients.event.dtos.valueObjects.Address;
+import com.microservice.clients.event.dtos.valueObjects.AgeRestriction;
+import com.microservice.clients.event.dtos.valueObjects.EventType;
+import com.microservice.clients.event.dtos.valueObjects.TicketItems;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

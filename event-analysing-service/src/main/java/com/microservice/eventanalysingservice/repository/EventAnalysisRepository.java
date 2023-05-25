@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface EventAnalysisRepository extends MongoRepository<EventAnalytics,String> {
 
-    Optional<EventAnalytics> findByEvent(Event event);
+    Optional<EventAnalytics> findByEventId(String eventId);
 
 }

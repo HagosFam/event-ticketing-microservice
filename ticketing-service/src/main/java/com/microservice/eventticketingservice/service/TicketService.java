@@ -5,16 +5,23 @@ import com.microservice.clients.event.dtos.EventDTOAdapter;
 import com.microservice.clients.event.dtos.valueObjects.Event;
 import com.microservice.clients.event.dtos.valueObjects.TicketItems;
 import com.microservice.clients.eventAnalytics.EventAnalysisClient;
+import com.microservice.clients.user.UserClient;
+import com.microservice.clients.user.dtos.User;
 import com.microservice.eventticketingservice.models.Ticket;
 import com.microservice.eventticketingservice.repository.TicketRepository;
 import com.microservice.eventticketingservice.service.dtos.TicketRequest;
 import com.microservice.eventticketingservice.service.dtos.TicketDTOAdapter;
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.Optional;
+import java.util.UUID;
 
 import static com.microservice.eventticketingservice.models.enums.TicketStatus.*;
 
@@ -24,7 +31,26 @@ import static com.microservice.eventticketingservice.models.enums.TicketStatus.*
 public class TicketService {
     private final TicketRepository ticketRepository;
     private final EventClient eventClient;
-    private final EventAnalysisClient eventAnalysisClient;
+
+    private final UserClient userClient;
+    @CircuitBreaker(name = "userService", fallbackMethod = "fallbackUser")
+    @Bulkhead(name = "bulkheadTicketService", fallbackMethod = "fallbackUser" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService", fallbackMethod = "fallbackUser")
+    public User getUser(long userId){
+        User user = userClient.getAUser(userId).getBody();
+        return user;
+
+    }
+    @CircuitBreaker(name = "userService", fallbackMethod = "fallbackEvent")
+    @Bulkhead(name = "bulkheadTicketService", fallbackMethod = "fallbackTicket" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService", fallbackMethod = "fallbackTicket")
+    public Event getEvent(String id){
+        Event event = eventClient.getEvent(id).getBody();
+        return event;
+    }
+    @CircuitBreaker(name = "ticketService", fallbackMethod = "fallbackGetTicket")
+    @Bulkhead(name = "bulkheadTicketService", fallbackMethod = "fallbackGetTicket" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService", fallbackMethod = "fallbackGetTicket")
     public Ticket getTicketFromId(String ticketId){
         Optional<Ticket> ticketbyId = ticketRepository.findById(ticketId);
         if(ticketbyId.isPresent()){
@@ -36,10 +62,13 @@ public class TicketService {
             return null;
         }
     }
-
+    @CircuitBreaker(name = "ticketService", fallbackMethod = "fallbackTicket")
+    @Bulkhead(name = "bulkheadTicketService", fallbackMethod = "fallbackTicket" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService", fallbackMethod = "fallbackTicket")
     public Ticket createATicket(TicketRequest ticketRequest){
         try {
-            Event event = eventClient.getEvent(ticketRequest.getEventId()).getBody();
+            BigDecimal price=BigDecimal.ZERO;
+            Event event = getEvent(ticketRequest.getEventId());
             for (TicketItems ticketItems : event.getTicketItemsList()) {
                 if (ticketItems.getLabel().equals(ticketRequest.getTicketItem())) {
                     if (ticketItems.getAvailableQuantity() <= 0) {
@@ -50,12 +79,17 @@ public class TicketService {
                         eventClient.updateEvent(EventDTOAdapter.mapEventToEventRequest(event),event.getId());
 
 
-                        ticketRequest.setPrice(ticketItems.getPrice());
+                        price= ticketItems.getPrice();
                     }
                 }
             }
             Ticket ticket = TicketDTOAdapter.getTicket(ticketRequest);
+            User user = userClient.getAUser(ticketRequest.getUserId()).getBody();
+            String ticketNumber = UUID.randomUUID().toString() + "TN";
+            ticket.setUser(user);
             ticket.setStatus(ACTIVE);
+            ticket.setPrice(price);
+            ticket.setTicketNumber(ticketNumber);
             ticket.setEvent(event);
 
 
@@ -77,7 +111,9 @@ public class TicketService {
         }
 
     }
-
+    @CircuitBreaker(name = "ticketService")
+    @Bulkhead(name = "bulkheadTicketService" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService")
     public void ticketRefund(String ticketId){
         Optional<Ticket> byId = ticketRepository.findById(ticketId);
         if(byId.isPresent()){
@@ -94,6 +130,9 @@ public class TicketService {
             log.info("ticket with id :{} was successfully refunded", ticketId);
         }
     }
+    @CircuitBreaker(name = "ticketService")
+    @Bulkhead(name = "bulkheadTicketService" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService")
     public void deleteTicket(String ticketId){
         Optional<Ticket> byId = ticketRepository.findById(ticketId);
         if (byId.isPresent()){
@@ -109,6 +148,9 @@ public class TicketService {
             log.error("this ticket is not valid");
         }
     }
+    @CircuitBreaker(name = "ticketService", fallbackMethod = "fallbackScanTicket")
+    @Bulkhead(name = "bulkheadTicketService", fallbackMethod = "fallbackScanTicket" ,type = Bulkhead.Type.THREADPOOL)
+    @Retry(name="retryTicketService", fallbackMethod = "fallbackScanTicket")
     public Ticket ticketScan(String ticketId){
         Optional<Ticket> byId = ticketRepository.findById(ticketId);
         if(byId.isPresent()){
@@ -128,6 +170,48 @@ public class TicketService {
 
 
     }
+    public Ticket fallbackTicket(TicketRequest ticketRequest, Throwable t) {
+        Ticket ticket = new Ticket();
+        ticket.setId("N/A");
+        ticket.setTicketNumber("SERVICE NOT AVAILABLE");
+        ticket.setTicketItem("SERVICE NOT AVAILABLE");
+
+        return ticket;
+    }
+    public Ticket fallbackScanTicket(String id, Throwable t) {
+        Ticket ticket = new Ticket();
+        ticket.setId("N/A");
+        ticket.setTicketNumber("SERVICE NOT AVAILABLE");
+        ticket.setTicketItem("SERVICE NOT AVAILABLE");
+
+        return ticket;
+    }
+    public Ticket fallbackGetTicket(String id, Throwable t) {
+        Ticket ticket = new Ticket();
+        ticket.setId("N/A");
+        ticket.setTicketNumber("SERVICE NOT AVAILABLE");
+        ticket.setTicketItem("SERVICE NOT AVAILABLE");
+
+        return ticket;
+    }
+
+    public User fallbackUser(long id, Throwable throwable) {
+        User fallbackUser = new User();
+        fallbackUser.setId(id);
+        fallbackUser.setUsername("N/A");
+        fallbackUser.setEmail("N/A");
+        fallbackUser.setDeleted(true);
+        // Set other minimal data as needed
+
+        return fallbackUser;
+    }
+    public Event fallbackEvent(String id, Throwable throwable) {
+        Event fallbackEvent = new Event();
+        fallbackEvent.setId(id);
+        fallbackEvent.setDescription("event not available try again");
+        return fallbackEvent;
+    }
+
 
 }
 

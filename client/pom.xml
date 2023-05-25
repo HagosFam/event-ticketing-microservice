@@ -8,5 +8,9 @@
     </parent>
     <artifactId>client</artifactId>
     <name>client</name>
+    <packaging>jar</packaging>
+
     <url>http://maven.apache.org</url>
+
+
 </project>

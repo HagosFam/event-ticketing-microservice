@@ -16,7 +16,7 @@ public class TicketController {
         this.ticketService = ticketService;
     }
     @GetMapping("/{ticketId}")
-    public ResponseEntity<Ticket> getTicketById(@PathVariable String ticketId) {
+    public ResponseEntity<Ticket> getTicketById(@PathVariable("ticketId") String ticketId) {
         Ticket ticket = ticketService.getTicketFromId(ticketId);
         if (ticket != null) {
             return ResponseEntity.ok(ticket);

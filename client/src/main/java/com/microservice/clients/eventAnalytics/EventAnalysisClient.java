@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@FeignClient("eventAnalysis")
+@FeignClient(value = "eventAnalysis", url = "${clients.eventAnalysis.url}")
 public interface EventAnalysisClient {
-    @GetMapping("/event-analytics/{eventId}")
+    @GetMapping("/eventAnalytics/{eventId}")
     ResponseEntity<EventAnalytics> getEventAnalyticsDataForEvent(@PathVariable("eventId") String eventId);
 
-    @PostMapping("/event-analytics/{eventId}")
+    @PostMapping("/eventAnalytics/{eventId}")
     ResponseEntity<EventAnalytics> createEventAnalyticsForEvent(@PathVariable("eventId") String eventId);
 
-    @PostMapping("/event-analytics/ticket-sales/{ticketId}")
+    @PostMapping("/eventAnalytics/ticket-sales/{ticketId}")
     ResponseEntity<EventAnalytics> addTicketSales(@PathVariable("ticketId") String ticketId);
 
-    @PostMapping("/event-analytics/refunded-tickets/{ticketId}")
+    @PostMapping("/eventAnalytics/refunded-tickets/{ticketId}")
     ResponseEntity<EventAnalytics> refundedTickets(@PathVariable("ticketId") String ticketId);
 
     }

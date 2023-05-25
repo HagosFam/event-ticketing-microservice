@@ -11,6 +11,7 @@
     <artifactId>ticketing-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ticketing-service</name>
+
     <description>ticketing-service</description>
     <properties>
         <java.version>17</java.version>
@@ -34,6 +35,14 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -50,14 +59,19 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka-test</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.microservice</groupId>
             <artifactId>client</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!--        <dependency>-->

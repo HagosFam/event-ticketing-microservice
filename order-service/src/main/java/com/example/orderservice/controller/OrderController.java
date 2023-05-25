@@ -18,7 +18,7 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping("/place")
-    public ResponseEntity<Order> placeOrder(@RequestBody OrderRequest orderRequest) {
+    public ResponseEntity<Order> placeOrder(@RequestBody OrderRequest orderRequest) throws InterruptedException {
         Order order = orderService.placeAnOrder(orderRequest);
         if (order != null) {
             return ResponseEntity.ok(order);
@@ -50,7 +50,7 @@ public class OrderController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Order>> getOrdersForUser(@PathVariable String userId) {
+    public ResponseEntity<List<Order>> getOrdersForUser(@PathVariable long userId) {
         List<Order> orders = orderService.getAllOrdersForUser(userId);
         return ResponseEntity.ok(orders);
     }

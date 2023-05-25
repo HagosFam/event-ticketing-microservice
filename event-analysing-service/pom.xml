@@ -65,26 +65,23 @@
         <groupId>org.springframework.kafka</groupId>
         <artifactId>spring-kafka-test</artifactId>
     </dependency>
-    <dependency>
-        <groupId>org.microservice</groupId>
-        <artifactId>kafka-producer</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.microservice</groupId>
-        <artifactId>kafka-consumer</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.microservice</groupId>
-        <artifactId>kafka-model</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.microservice</groupId>
-        <artifactId>kafka-data-config</artifactId>
-    </dependency>
+
         <dependency>
             <groupId>org.microservice</groupId>
             <artifactId>client</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
         </dependency>
 
     </dependencies>

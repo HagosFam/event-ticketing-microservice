@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "events")
+@FeignClient(name = "events",
+                url = "${clients.events.url}")
 public interface EventClient {
     @PostMapping("/api/events")
     ResponseEntity<Event> createEvent(@RequestBody EventRequest eventRequest);

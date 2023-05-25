@@ -1,7 +1,6 @@
 spring:
   application:
-    name: orders
-  profiles:
-    active: docker
+    name: notifications
+
   config:
     import: configserver:http://configServer:8071

@@ -8,13 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/event-analytics")
+@RequestMapping("/eventAnalytics")
 @RequiredArgsConstructor
 public class EventAnalyticsController {
     private final EventAnalyticsService eventAnalyticsService;
 
     @GetMapping("/{eventId}")
-    public ResponseEntity<EventAnalytics> getEventAnalyticsDataForEvent(@PathVariable String eventId) {
+    public ResponseEntity<EventAnalytics> getEventAnalyticsDataForEvent(@PathVariable("eventId") String eventId) {
         EventAnalytics eventAnalytics = eventAnalyticsService.getEventAnalyticsDataForEvent(eventId);
         if (eventAnalytics != null) {
             return ResponseEntity.ok(eventAnalytics);

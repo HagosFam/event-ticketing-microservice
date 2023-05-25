@@ -1,9 +1,10 @@
-package com.microservice.eventmanagementservice.messaging.publisher;
+package com.example.orderservice.messaging.publisher;
 
+import com.example.orderservice.messaging.OrderMessaginMapper;
+import com.example.orderservice.models.Order;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.microservice.clients.messagingObjects.EventData;
-import com.microservice.eventmanagementservice.messaging.EventMessagingMapper;
-import com.microservice.eventmanagementservice.models.Event;
+import com.microservice.clients.messagingObjects.Operation;
+import com.microservice.clients.messagingObjects.OrderData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -14,21 +15,21 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @RequiredArgsConstructor
 public class EventPublisher {
-    private final EventMessagingMapper eventMessagingMapper;
+    private final OrderMessaginMapper orderMessaginMapper;
 
     private final KafkaTemplate<String,String> kafkaTemplate;
-    public void publish(Event event){
+    public void publish(Order order, Operation operation){
         try  {
-        log.info("Received Event-created event for event id:{}", event.getId());
-        EventData eventData = eventMessagingMapper.getEventData(event);
-            ObjectMapper objectMapper= new ObjectMapper();
-            String s = objectMapper.writeValueAsString(eventData);
-
-            kafkaTemplate.send("event-created",s);
+        log.info("Received Order-placed event for order id:{}", order.getId());
+        OrderData eventData = orderMessaginMapper.getOrderData(order);
+        eventData.setOperation(operation);
+        ObjectMapper objectMapper= new ObjectMapper();
+        String payload = objectMapper.writeValueAsString(eventData);
+        kafkaTemplate.send("order-placed",payload);
         log.info("message send successfully");
 
         }catch (Exception e){
-          log.error("Error while sending eventData to kafka with event id:{} message: {}", event.getId(),e.getMessage());
+          log.error("Error while sending eventData to kafka with event id:{} message: {}", order.getId(),e.getMessage());
       }
 
 

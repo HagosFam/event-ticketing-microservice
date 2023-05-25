@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: orders
-  profiles:
-    active: docker
-  config:
-    import: configserver:http://configServer:8071

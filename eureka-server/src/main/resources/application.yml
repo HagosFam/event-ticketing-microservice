@@ -1,15 +1,15 @@
-spring:
-  application:
-    name: eurekaServer
-  profiles:
-    active: dev
-  config:
-    import: configserver:http://localhost:8071
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
-
-
+#spring:
+#  application:
+#    name: eurekaServer
+#  profiles:
+#    active: dev
+#  config:
+#    import: configserver:http://localhost:8071
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#
+#
+#

@@ -1,2 +1,6 @@
-package com.microservice.clients.messagingObjects;public class Operation {
+package com.microservice.clients.messagingObjects;
+
+public enum Operation {
+    BOUGHT,
+    REFUNDED
 }

@@ -28,20 +28,20 @@ public class GatewayserverApplication {
 	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
 	    return builder.routes()
 	        .route(p -> p
-	            .path("/eazybank/accounts/**")
-	            .filters(f -> f.rewritePath("/eazybank/accounts/(?<segment>.*)","/${segment}")
+	            .path("/api/users/**")
+	            .filters(f -> f.rewritePath("/api/users/(?<segment>.*)","/${segment}")
 	            				.addResponseHeader("X-Response-Time",new Date().toString()))
-	            .uri("lb://ACCOUNTS")).
-	        route(p -> p
-		            .path("/eazybank/loans/**")
-		            .filters(f -> f.rewritePath("/eazybank/loans/(?<segment>.*)","/${segment}")
-		            		.addResponseHeader("X-Response-Time",new Date().toString()))
-		            .uri("lb://LOANS")).
-	        route(p -> p
-		            .path("/eazybank/cards/**")
-		            .filters(f -> f.rewritePath("/eazybank/cards/(?<segment>.*)","/${segment}")
-		            		.addResponseHeader("X-Response-Time",new Date().toString()))
-		            .uri("lb://CARDS")).build();
+	            .uri("lb://USERS")).build();
+//	        route(p -> p
+//		            .path("/eazybank/loans/**")
+//		            .filters(f -> f.rewritePath("/eazybank/loans/(?<segment>.*)","/${segment}")
+//		            		.addResponseHeader("X-Response-Time",new Date().toString()))
+//		            .uri("lb://LOANS")).
+//	        route(p -> p
+//		            .path("/eazybank/cards/**")
+//		            .filters(f -> f.rewritePath("/eazybank/cards/(?<segment>.*)","/${segment}")
+//		            		.addResponseHeader("X-Response-Time",new Date().toString()))
+//		            .uri("lb://CARDS")).build();
 	}
 
 	@ConditionalOnClass({ContextSnapshot.class, Hooks.class})

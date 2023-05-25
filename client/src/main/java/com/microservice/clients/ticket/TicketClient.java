@@ -6,13 +6,13 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "tickets")
+@FeignClient(name = "tickets", url = "${clients.tickets.url}")
 public interface TicketClient {
 
     @PostMapping("/buy")
     ResponseEntity<Ticket> createTicket(@RequestBody TicketRequest ticketRequest);
     @GetMapping("/{ticketId}")
-    public ResponseEntity<Ticket> getTicketById(@PathVariable String ticketId);
+     ResponseEntity<Ticket> getTicketById(@PathVariable("ticketId") String ticketId);
 
     @PostMapping("/refund/{ticketId}")
     ResponseEntity<Void> refundTicket(@PathVariable("ticketId") String ticketId);

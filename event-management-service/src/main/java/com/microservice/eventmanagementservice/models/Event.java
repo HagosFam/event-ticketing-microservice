@@ -1,6 +1,10 @@
 package com.microservice.eventmanagementservice.models;
 
 
+import com.microservice.clients.event.dtos.valueObjects.Address;
+import com.microservice.clients.event.dtos.valueObjects.AgeRestriction;
+import com.microservice.clients.event.dtos.valueObjects.EventType;
+import com.microservice.clients.event.dtos.valueObjects.TicketItems;
 import com.microservice.clients.user.dtos.User;
 import lombok.*;
 import org.springframework.data.annotation.Id;

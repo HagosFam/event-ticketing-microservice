@@ -1,14 +1,3 @@
-#spring:
-#  application:
-#    name: users
-#
-#  config:
-#    import: configserver:http://configServer:8071
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
 server:
   port: 8080
 spring:
@@ -16,8 +5,8 @@ spring:
     name: users
   datasource:
     password: password
-    url: jdbc:postgresql://postgres:5432/user
-    username: yohannes
+    url: jdbc:postgresql://postgres:5432/users
+    username: users
   jpa:
     hibernate:
       ddl-auto: update
@@ -32,7 +21,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eurekaServer:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka
     fetch-registry: true
     register-with-eureka: true
     enabled: true

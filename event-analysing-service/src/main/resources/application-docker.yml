@@ -1,7 +1,8 @@
 spring:
   application:
-    name: eventAnnouncements
-  profiles:
-    active: docker
+    name: eventAnalysis
+
   config:
     import: configserver:http://configServer:8071
+  kafka:
+    bootstrap-servers: kafka:9092
